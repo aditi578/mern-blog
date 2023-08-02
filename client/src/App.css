@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #379683;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #266d5a;
+}
+
+main {
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #379683;
+}
+
+header nav {
+  display: flex;
+  gap: 24px;
+}
+
+div.post {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+div.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+div.post div.image {
+  flex: 0 0 300px;
+  max-height: 300px;
+  margin-right: 20px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #379683;
+}
+
+div.post div.image img {
+  object-fit: contain;
+  object-position: center center;
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+div.post:hover div.image img {
+  transform: scale(1.1);
+}
+
+div.post div.texts {
+  flex: 1;
+}
+
+div.post div.texts h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+div.post p.info {
+  margin: 24px 0;
+  color: #bbb;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+div.post p.info a.author {
+  color: #379683;
+  
+}
+
+div.post p.summary {
+  margin: 10px 0;
+  line-height: 1.8rem;
+  color: #555;
+}
+
+form.login,
+form.register {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #555;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #379683;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background-color: #379683;
+  border: 0;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #266d5a;
+}
+
+form.login h1,
+form.register h1 {
+  text-align: center;
+  color: #379683;
+}
+
+div.post div.image {
+  object-fit: cover;
+  flex: 0 0 250px; 
+  max-height: 200px; 
+  margin-right: 20px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #379683;
+}
+
+div.post-page .image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  width: 500px; /* Set the desired width */
+  height: 300px; /* Set the desired height */
+  object-fit: cover;
+}
+
+
+div.post-page {
+  object-fit: contain;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+div.post-page h1 {
+  margin: 10px 0 20px;
+  color: #379683;
+}
+
+div.post-page time {
+  color: #888;
+}
+
+div.post-page div.author {
+  color: #888;
+}
+
+div.content {
+  text-align: justify;
+  line-height: 1.8rem;
+  margin: 20px 0;
+  color: #333;
+}
+
+div.content p {
+  margin-bottom: 20px;
+}
+
+div.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
